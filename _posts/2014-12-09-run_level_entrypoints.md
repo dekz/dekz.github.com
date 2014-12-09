@@ -5,25 +5,28 @@ tags: docker ci
 published: true
 ---
 
-After migrating to our new CI platform :package:, mass project importation happened and as a result there was noticeable code duplication.
+We recently finished migrating to our new CI platform :package:, many projects, many containers, a lot of layers.
+Then we found ourselves repeating ourselves.
 
-Each project copied one another (literally) and created similar files in their respective containers and projects.
+Each project copied one another and created similar files for their containers and projects.
 
-Unfortunately this meant when one project got a sweet new upgrade, no other projects benefited.
+Unfortunately this meant when one project got a sweet new upgrade, no one else benefited.
 
-*Our containers were leaking!* So we looked at consolidating these scripts and creating an extensible system.
+*Our containers were leaking!* To much of our CI environment was ending up in the projects themselves.
+
+So we looked at addressing this and hopefully create an extensible system.
 
 ## Entrypoint
 
-The scripts being duplicated were container [ENTRYPOINT](https://docs.docker.com/reference/builder/#entrypoint)'s. This is the place to solve problems runtime problems like creating a runtime user to execute the build.
+The scripts being duplicated were container [ENTRYPOINT](https://docs.docker.com/reference/builder/#entrypoint)'s. This is the place where we solved runtime problems such as creating a runtime user to execute the build.
 
-Below are 3 tasks taken from our old entrypoint, these are required to be performed in order to get the container in a perfect state to execute the build step.
+Below are 3 tasks taken from our old entrypoint, these are required to be performed in order to get the container in a state to execute the build.
 
 1. Download artefacts (assets)
 2. Create a special user with a specific UID
-3. Get all of our required gems
+3. Get gems :gem:
 
-We split these tasks into scripts, assigned each a run level, then moved them as high up into the container level as possible.
+We then split these tasks into scripts and assigned each a run level. Then we took them out of each project and moved them as high up into the container level as possible.
 
 Here are the containers alongside their scripts:
 
