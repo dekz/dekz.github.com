@@ -1,0 +1,27 @@
+# Dependencies
+markdown:            redcarpet
+highlighter:         pygments
+
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+relative_permalinks: true
+
+# Setup
+title:               Jacob
+tagline:             'tag'
+description:         'desc'
+url:                 http://dekz.net
+baseurl:             /
+paginate:            5
+
+# About/contact
+author:
+  name:              Jacob Evans
+  url:               https://twitter.com/dekz
+  email:             jacob@dekz.net
+
+# Custom vars
+version:             1.0.0
+gems: ["emoji_for_jekyll"]
