@@ -24,4 +24,5 @@ author:
 
 # Custom vars
 version:             1.0.0
-gems: ["emoji_for_jekyll"]
+gems:
+  - jemoji
