@@ -10,8 +10,8 @@ relative_permalinks: true
 
 # Setup
 title:               Jacob
-tagline:             'tag'
-description:         'desc'
+tagline:             '@dekz'
+description:         '@dekz'
 url:                 http://dekz.net
 baseurl:             /
 paginate:            5
