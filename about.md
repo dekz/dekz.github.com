@@ -3,11 +3,5 @@ layout: page
 title: About
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
-
-A young developer from Brisbane, currently living in Melbourne and working as a Developer at [Hooroo](http://www.hooroo.com).
-
-## Setup
+A developer from Brisbane, currently living in Melbourne and working at [Hooroo](http://www.hooroo.com).
 

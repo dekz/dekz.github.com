@@ -12,7 +12,7 @@ relative_permalinks: true
 title:               Jacob
 tagline:             '@dekz'
 description:         '@dekz'
-url:                 http://dekz.net
+url:                 dekz.github.io
 baseurl:             /
 paginate:            5
 
@@ -26,3 +26,7 @@ author:
 version:             1.0.0
 gems:
   - jemoji
+
+analytics :
+  google :
+    tracking_id : 'UA-51996615-1'

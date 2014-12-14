@@ -6,9 +6,7 @@ published: true
 ---
 
 We recently finished migrating to our new CI platform :package:, many projects, many containers, a lot of layers.
-Then we found ourselves repeating ourselves.
-
-Each project copied one another and created similar files for their containers and projects.
+Soon enough we found ourselves duplicating code.
 
 Unfortunately this meant when one project got a sweet new upgrade, no one else benefited.
 
